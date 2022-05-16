@@ -17,3 +17,4 @@ We give basic support through our website [payrequest.io](https://payrequest.io)
 
 - WHMCS [supported version](https://docs.whmcs.com/Long_Term_Support#WHMCS_Version_.26_LTS_Schedule)
 - PHP 7.4+
+- [PayRequest WHMCS Gateway](https://github.com/payrequestio/whmcs-gateway/)
