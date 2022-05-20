@@ -107,8 +107,9 @@
 					$merge_fields['payrequest_payment_link'] = '';
 			}
 			if(isset($merge_fields['payrequest_payment_link'])&&!empty($merge_fields['payrequest_payment_link'])){
-				
+				$merge_fields['payrequest_payment_link_tag'] = '<a href="' . $merge_fields['payrequest_payment_link'] . '" target="_blank">' . $merge_fields['payrequest_payment_link'] . '</a>';
 				$merge_fields['payrequest_qr_image'] = 'https://dashboard.payrequest.io/default/qrcode/'.str_ireplace('https://','',$merge_fields['payrequest_payment_link']);
+				$merge_fields['payrequest_qr_image_tag'] = '<img src="' . $merge_fields['payrequest_qr_image'] . '" alt="Link to ' . $merge_fields['payrequest_payment_link'] . '" title="QR code to pay your invoice easily."/>';
 			}
 		}
 		return $merge_fields;
@@ -118,6 +119,8 @@
 	add_hook("EmailTplMergeFields",1, function ($vars){
 		$merge_fields = [];
 		$merge_fields['payrequest_payment_link'] = "PayRequest Payment Link";
+		$merge_fields['payrequest_payment_link_tag'] = "PayRequest Payment Link + Tag";
 		$merge_fields['payrequest_qr_image'] = "PayRequest QR image";
+		$merge_fields['payrequest_qr_image_tag'] = "PayRequest QR image + Tag";
 		return $merge_fields;
 	});
