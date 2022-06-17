@@ -1,3 +1,5 @@
+# NOTICE - Merged into [WHMCS-Gateway](https://github.com/payrequestio/whmcs-gateway)!!
+
 # WHMCS PayRequest Mail Module #
 
 Compatible with all WHMCS versions that are [supported by WHMCS](https://docs.whmcs.com/Long_Term_Support#WHMCS_Version_.26_LTS_Schedule).
